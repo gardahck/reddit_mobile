@@ -12,6 +12,11 @@ This extension includes:
 * swipe left to open the side bar starting right of center
 * swipe right to open header menu starting left of center
 
+## 3.0
+
+* can now block(hide) subreddits you would prefer not to see
+* manage blocked subreddits at the bottom of the page or clear cache
+
 ## 2.3 
 
 * minor link fix

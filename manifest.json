@@ -3,7 +3,7 @@
     "description": "Restyles reddit pages to be more mobile friendly",
     "manifest_version": 2,
     "name": "Pretty Mobile Reddit",
-    "version": "2.4",
+    "version": "3.0",
     "homepage_url": "https://w.ll.am",
     "icons": {
         "128": "icons/R.png"

@@ -33,9 +33,8 @@ body > .content > .sitetable > .thing > .rank { display: none;}
 body > .content > .sitetable > .thing > .midcol{margin:5px 5px 0 0;}
 body > .content > .sitetable > .nav-buttons{margin:10px 10px;}
 body > .content > .sitetable > .nav-buttons > span > span{font-size: 15px;}
-body > .content > .sitetable > .link .title{
-    font-size: 12px;
-}
+
+body .content .sitetable .title{font-size: 13px;}
 
 /* Video Link */
 body > .content > .sitetable .no-constraints-when-pinned{ min-width: 100% !important; max-width:100% !important;}
@@ -58,13 +57,12 @@ iframe{width:100%;}
     flex: 0 0 45%;
 }
 
-
 body .content .commentarea .sitetable .thing .midcol{
     position:relative;
 }
 
 body .content .sitetable .thing .midcol{
-    position: absolute; left:0;
+    position: absolute; left:0; z-index: 50;
 }
 
 body .content .sitetable .thing .thumbnail{
@@ -74,9 +72,13 @@ body .commentarea .sitetable .thing .entry{
     position:relative;
     margin: 0 0 5px 10px;
 }
-body > .content > .sitetable > .thing .entry{
+body > .content > .sitetable .thing .entry{
     position:relative;
     margin: 0 0 5px 50px;
+    overflow: visible;
+}
+body > .content > .sitetable .thing .entry .expando{
+    margin: 0 0 0 -50px;
 }
 body > .content > .sitetable > .thing .entry .title{
     display: inline;
@@ -86,6 +88,42 @@ body .content .sitetable .thing .imgwrap{
 }
 
 .expando-button{display:none}
+
+#blockButton{
+    cursor:pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+#blockList{
+    display: none;
+    flex-wrap:wrap;
+    justify-content: center;
+    padding:10px 25px;
+}
+#blockList .blockedItem{
+    position: relative;
+    padding:5px 15px 5px 10px;
+    margin: 0 4px 8px;
+    border:1px solid #666;
+    border-radius:3px;
+    background-color: #BBB;
+    color:#222;
+    cursor:pointer;
+    font-size: 12px;
+    font-weight: bold;
+}
+#blockList .blockedItem:after{
+    content:'x';
+    font-size:0.7em;
+    color:#800000;
+    position: absolute;
+    top:0.3em;
+    right: 0.7em;
+}
+
+#blockList.showBlockList{
+    display:flex;
+}
 
 @media (prefers-color-scheme: dark) {
     body, body > .side{
